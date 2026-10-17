@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Krea 14B · 组件迁移长视频对照</title>
+  <meta name="description" content="五组固定场景的 20 秒五方法初筛与 50 秒 E1/E6 配对实验。">
+  <link rel="stylesheet" href="comparison.css?v=20261017">
+  <script src="config.js?v=20261017" defer></script>
+  <script src="comparison.js?v=20261017c" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./"><span class="brand-mark">K</span><span>Krea 14B <small>实验观察室</small></span></a><nav><a href="#viewer">视频对照</a><a href="#guide">阅读说明</a></nav></header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow"><span class="signal"></span> KREA REALTIME VIDEO 14B · COMPONENT STUDY</p>
+      <h1>同一段提示词，<br><em>看得更久会怎样？</em></h1>
+      <p class="lead">五组动态场景，20 秒展示 E0、E1、E2、E3、E6；50 秒配对展示 E1 与 E6。按同一时间点检查结构、身份、细节、色彩，以及动作是否仍在继续。</p>
+      <div class="facts"><div><strong>05</strong><span>固定场景与 seed</span></div><div><strong>05</strong><span>20 秒方法</span></div><div><strong>02</strong><span>50 秒方法</span></div><div><strong>16 <small>fps</small></strong><span>统一帧率</span></div></div>
+    </section>
+    <section id="viewer" class="viewer">
+      <div class="section-title"><span>01 / EXPERIMENTS</span><h2>并排查看</h2><p>视频独立解码；同步播放为浏览器层面的近似同步。</p></div>
+      <div class="panel controls">
+        <div class="control-row"><div><span class="field-label">时长</span><div class="duration-switch" role="group" aria-label="选择时长"><button type="button" data-duration="20" aria-pressed="false">20 秒 <small>五种方法</small></button><button type="button" data-duration="50" aria-pressed="true">50 秒 <small>E1 / E6</small></button></div></div><label class="case-control"><span class="field-label">动态场景</span><select id="case-select"></select></label></div>
+        <div class="method-row"><div><span class="field-label">方法</span><p>最多三种并排。E0 为 1× 生成后 bicubic 放大展示。</p></div><div id="method-options" role="group" aria-label="选择比较方法"></div></div>
+      </div>
+      <div class="panel timeline-panel">
+        <div class="timeline-header"><div><span class="field-label">分段定位</span><p>固定时间段，不自动挑选画面。</p></div><div id="segments" class="segments" role="group" aria-label="跳转时间段"></div></div>
+        <div class="transport"><button id="play" class="primary" disabled>同步播放</button><button id="pause" disabled>暂停</button><button id="restart" disabled>回到开头</button><label for="seek">共同时间 <output id="time">00:00 / 00:50</output></label><input id="seek" type="range" min="0" max="800" value="0" disabled><label for="speed">速度 <select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label></div>
+        <p id="status" class="status" role="status">正在读取案例资料…</p>
+      </div>
+      <div id="cards" class="cards"></div>
+      <details class="panel case-details" open><summary>固定输入与生成设置</summary><div class="details-grid"><div><h3>Prompt</h3><p id="prompt"></p><p id="seed" class="seed"></p></div><div><h3>本组输出</h3><dl id="params"></dl></div></div></details>
+    </section>
+    <section id="guide" class="reading"><div><span class="eyebrow">02 / HOW TO READ</span><h2>观察什么</h2></div><div><p>50 秒可按 0–10、10–20、20–30、30–40、40–50 秒检查。记录首次持续至少一秒的结构或身份错误、色彩漂移起点、后期细节变化，以及运动减少、冻结或循环。未出现的错误记为“未观察到，观察截止 50 秒”。</p><p>20 秒的 E0–E3 来自早期初筛，E6 来自后续适配版本；50 秒 E1/E6 是新一轮运行。跨运行前缀严格一致性仍需噪声与 latent 核对。E6 与 E1 的缓存容量、历史处理和 RoPE 也不同，不能把差异仅归因于 EMA。五条样本仅供探索。</p><p>E0 原生 832 × 480，页面播放普通 bicubic 放大的 1664 × 960 版本；卡片可打开原生文件。其余方法为 1664 × 960。卡片提供经筛选的运行摘要。</p></div></section>
+  </main>
+  <footer class="page-footer"><span>Krea 14B · E0–E3 / E6 20s · E1 / E6 50s</span><span>35 条视频 · 5 组固定场景</span></footer>
+</body>
+</html>

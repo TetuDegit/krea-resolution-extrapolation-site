@@ -1,0 +1,27 @@
+[
+  {
+    "original_id": "motion_01",
+    "seed": 120241,
+    "prompt": "A single cyclist wearing a blue jacket rides steadily along a cobblestone street beside weathered red brick buildings. The camera tracks alongside the cyclist at the same speed, keeping the rider and bicycle clearly visible while the brick walls and shop windows pass through the background. The wheels rotate continuously, the rider pedals naturally, and the jacket moves gently in the breeze. Detailed brick mortar, paving stones, and fabric texture. Consistent soft daylight, one continuous shot, natural moderate motion."
+  },
+  {
+    "original_id": "motion_02",
+    "seed": 120242,
+    "prompt": "One textile vendor stands behind a wooden table in an open-air fabric market. The vendor lifts a patterned woven cloth, unfolds it with both hands, gently shakes it open, and spreads it across the table. The cloth bends and ripples naturally, with its woven pattern remaining visible. Hanging fabrics move slightly in the breeze. The camera slowly moves sideways, keeping the vendor's hands and the cloth in view. Consistent diffuse daylight, one continuous shot."
+  },
+  {
+    "original_id": "motion_03",
+    "seed": 120243,
+    "prompt": "Exactly one golden retriever walks briskly beside one adult holding its leash along a brick path in a public park. The camera moves backward at a steady speed in front of them. The dog's legs move in a natural walking rhythm, its fur and ears move gently, and the leash swings slightly. Flower beds, grass, and tree trunks pass through the background. The dog and person remain in view. Consistent daylight, one continuous shot, detailed fur and paving texture."
+  },
+  {
+    "original_id": "motion_04",
+    "seed": 120244,
+    "prompt": "One potter shapes a clay bowl on a continuously rotating pottery wheel in a workshop. The potter's hands press and smooth the wet clay as the bowl gradually changes shape, with small streaks of water and clay visible on the surface. The camera makes a slow, gentle arc around the workbench while keeping both hands, the bowl, and the spinning wheel visible. Detailed clay surface, skin, and wooden workbench. Steady soft window light, one continuous shot."
+  },
+  {
+    "original_id": "motion_05",
+    "seed": 120245,
+    "prompt": "A narrow wooden boat carrying one rower moves steadily along a calm canal beside old stone buildings. The rower repeatedly dips the oars into the water and pulls them back, producing small splashes and spreading ripples. The camera tracks from the canal bank, keeping the boat visible as the stone walls and waterside plants move through the background. Detailed wood grain, stone texture, and water reflections. Consistent overcast daylight, one continuous shot, moderate natural motion."
+  }
+]
